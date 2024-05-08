@@ -177,46 +177,49 @@
             </p>
           </div>
           <div class="contact-form">
-            <div class="label-inputs">
-            <label for="FIO">
-              ФИО:
-              <input type="text" id="FIO">
-            </label>
-            <label for="EMAIL">
-              Ваша Е-почта:
-              <input type="text" id="EMAIL" placeholder="sophie@example.com" pattern=".+@example\.com" maxlength="30" required>
-            </label>
-            <label for="P-NUMBER">
-              Ваш телефон:
-              <input type="text" id="P-NUMBER">
-            </label>
-            <label for="SERVICE-ID">
-              Необходимая услуга:
-              <select id="SERVICE-ID">
-                <option>Разработка сайта</option>
-                <option>Создание сайта</option>
-                <option>Доработка сайта</option>
-                <option>Поддержка сайта</option>
-                <option>SEO</option>
-                <option>SMM</option>
-                <option>Комплексное продвижение (%)</option>
-                <option>Разработка приложения</option>
-              </select>
-            </label>
-            <label for="BUDGET">
-              Предполагаемый бюджет:
-              <select id="BUDGET">
-                <option>от 10 000 руб.</option>
-                <option>от 25 000 руб.</option>
-                <option>от 50 000 руб.</option>
-                <option>от 100 000 руб.</option>
-                <option>от 300 000 руб.</option>
-                <option>от 1 000 000 руб.</option>
-              </select>
-            </label>
-            </div>
+            <form class="label-inputs" action="send.php" method="post">
+              <label for="name">
+                ФИО:
+                <input type="text" id="name" name="name">
+              </label>
+              <label for="email">
+                Ваша Е-почта:
+                <input type="email" id="email" name="email" placeholder="sophie@example.com"  maxlength="30" required>
+              </label>
+              <label for="phone">
+                Ваш телефон:
+                <input type="tel" id="phone" name="phone">
+              </label>
+              <label for="service">
+                Необходимая услуга:
+                <select id="service" name="service">
+                  <option>Разработка сайта</option>
+                  <option>Создание сайта</option>
+                  <option>Доработка сайта</option>
+                  <option>Поддержка сайта</option>
+                  <option>SEO</option>
+                  <option>SMM</option>
+                  <option>Комплексное продвижение (%)</option>
+                  <option>Разработка приложения</option>
+                </select>
+              </label>
+              <label for="budget">
+                Предполагаемый бюджет:
+                <select id="budget" name="budget">
+                  <option>от 10 000 руб.</option>
+                  <option>от 25 000 руб.</option>
+                  <option>от 50 000 руб.</option>
+                  <option>от 100 000 руб.</option>
+                  <option>от 300 000 руб.</option>
+                  <option>от 1 000 000 руб.</option>
+                </select>
+              </label>
+              <button class="form-send" type="submit">
+                <img src="/img/Vector.png" alt="#">
+            </button>
+            </form>
           </div>
-          <button class="form-send">
+          <button class="form-send" type="submit">
             <img src="/img/Vector.png" alt="#">
           </button>
         </div>
