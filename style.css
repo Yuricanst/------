@@ -130,12 +130,15 @@ h2:not(.h2-hero-box){
   justify-content: center;
   align-items: center;
 }
+.text-btn-hero a {
+  color: #041020;
+  text-decoration: none;
+}
 .after-image-btn {
   width:120px;
   height: 40px;
   background: linear-gradient(95deg, #FAFDFF 3.72%, rgba(250, 253, 255, 0.00) 71.46%);
 }
-
 .feedback-panels {
   width: 100%;
 }
@@ -165,17 +168,23 @@ h2:not(.h2-hero-box){
   height: 64px;
 }
 .feedback-panel-1 {
+  display: flex;
+  flex-direction: column;
   width: 320px;
   background-color: var(--darkblue-color);
   border-radius: 10px;
   padding: 20px 20px 0 20px;
+  justify-content: space-between;
 }
 .feedback-panel-2 {
+  display: flex;
+  flex-direction: column;
   width: 320px;
   background-color: var(--lightblue);
   border-radius: 10px;
   padding: 20px 20px 0 20px;
   border: 1px solid var(--darkblue-color);
+  justify-content: space-between;
 }
 .feedback-panel-2 p {
   color: var(--dark);
@@ -316,20 +325,43 @@ h2:not(.h2-hero-box){
   border-radius: 10px;
 }
 .form-send {
-  width: 95px;
-  height: 100%;
+  width: 55px;
+  height: 492px;
   background-color: var(--darkblue-color);
   border: none;
+  transition: background-color 0.3s ease;
+}
+.form-send:hover {
+  background-color:var(--lightblue);
+  border-left: 2px solid var(--darkblue-color);
+}
+.form-send:hover img {
+  opacity: 0;
+}
+.form-send:hover::before {
+  content: url('/img/Vector\(blue\).png');
+  position: absolute;
 }
 .label-inputs {
   margin-top: 46px;
   display: flex;
   flex-direction: column;
   gap:10px ;
+  position: relative;
 }
 .label-inputs input  {
   margin-top: 10px;
   padding-left: 10px;
+  font-size: 18px;
+}
+.label-inputs input:focus  {
+  outline: none;
+  animation: blink-border 3s infinite;
+}
+@keyframes blink-border {
+  0% { border-color: transparent; }
+  50% { border-color: var(--darkblue-color); }
+  100% { border-color: transparent; }
 }
 .label-inputs select  {
   margin-top: 10px;
@@ -339,6 +371,14 @@ h2:not(.h2-hero-box){
   width: 522px;
   height: 40px;
   font-size: 18px;
+  outline: none;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end; 
+  position: absolute; 
+  right: -78px; 
+  bottom: -49px; 
 }
 footer {
   background-color: var(--darkblue-color);

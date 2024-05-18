@@ -2,31 +2,35 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Получение данных из формы
     $name = $_POST['name'];
+    $phone = $_POST['phone'];
     $email = $_POST['email'];
-    $message = $_POST['message'];
+    $budget = $_POST['budget'];
+    $service = $_POST['service'];
     
     // Адрес, на который будет отправлено письмо
-    $to = "ваш_адрес_почты@example.com";
-    
+    $to = "duvarov_1987@mail.ru";
+
     // Тема письма
-    $subject = "Новое сообщение с формы на вашем сайте";
-    
+    $subject = "Новая заявка с формы";
+
     // Формирование тела письма
     $body = "От: $name\n";
-    $body .= "Email: $email\n\n";
-    $body .= "Сообщение:\n$message";
-    
+    $body .= "Email: $email\n";
+    $body .= "Номер телефона: $phone\n";
+    $body .= "Услуга: $service\n";
+    $body .= "Бюджет: $budget\n";
+
     // Отправка письма
     $mail_sent = mail($to, $subject, $body);
-    
+
     // Проверка успешности отправки
-    if ($mail_sent) {
-        echo "<p>Спасибо за отправку формы! Мы свяжемся с вами в ближайшее время.</p>";
+     if ($mail_sent) {
+        header("Location: thank_you.html");
     } else {
-        echo "<p>Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.</p>";
+        echo "Ошибка отправки. Пожалуйста, попробуйте еще раз.";
     }
 } else {
-    // Если скрипт был вызван напрямую, а не методом POST
-    echo "<p>Доступ запрещен.</p>";
+    // В случае, если скрипт был вызван напрямую, а не методом POST
+    echo "Доступ запрещен";
 }
 ?>
