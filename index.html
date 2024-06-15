@@ -212,7 +212,7 @@
             </p>
           </div>
           <div class="contact-form">
-            <form class="label-inputs" action="send.php" method="post">
+            <form class="label-inputs" action="send.php" method="post" id="myForm">
               <label for="name">
                 ФИО:
                 <input
@@ -270,7 +270,10 @@
                   <option>от 300 000 руб.</option>
                   <option>от 1 000 000 руб.</option>
                 </select>
-              </label>
+              </label>  
+              <div class="check-agreement">
+                <input type="checkbox" class="agreement" id="agreement"><p><a href="/politics.html">Я соглашаюсь с обработкой моих данных</a></p>
+              </div>
               <div class="button-container">
                 <button class="form-send" type="submit">
                   <img src="/img/Vector.png" alt="#" />
@@ -316,6 +319,7 @@
             <div class="coopyright">
               <img src="/img/vavlab-footer.png" alt="#" />
               <p>© 2009 ВЕБ-студия "VAVlab."</p>
+              <p><a href="/politics.html" style="font-size: 12px;">Политика конфиденциальности</a></p>
             </div>
           </div>
           <div class="map">
@@ -324,6 +328,6 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

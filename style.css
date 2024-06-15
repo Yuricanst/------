@@ -318,7 +318,7 @@ h2:not(.h2-hero-box){
   margin-left:31px;
   margin-right: 32px;
 }
-.contact-form input {
+.contact-form input:not([type="checkbox"]) {
   width: 508px;
   height: 40px;
   border: 2px solid var(--darkblue-color);
@@ -342,14 +342,14 @@ h2:not(.h2-hero-box){
   content: url('/img/Vector\(blue\).png');
   position: absolute;
 }
-.label-inputs {
+.label-inputs  {
   margin-top: 46px;
   display: flex;
   flex-direction: column;
   gap:10px ;
   position: relative;
 }
-.label-inputs input  {
+.label-inputs input:not([type="checkbox"])  {
   margin-top: 10px;
   padding-left: 10px;
   font-size: 18px;
@@ -373,17 +373,30 @@ h2:not(.h2-hero-box){
   font-size: 18px;
   outline: none;
 }
+.label-inputs a {
+  text-decoration: none;
+  color: black;
+  text-decoration: underline;
+}
 .button-container {
   display: flex;
   justify-content: flex-end; 
   position: absolute; 
   right: -78px; 
-  bottom: -49px; 
+  bottom: -19px; 
+}
+.agreement {
+  width: 20px;
+  height: 20px;
+}
+.check-agreement {
+  display: flex;
+  gap: 10px;
 }
 footer {
   background-color: var(--darkblue-color);
   width: 100%;
-  height: 484px;
+  height: 513px;
   bottom: 0;
   margin-top:100px;
 }
@@ -427,7 +440,8 @@ footer p {
   gap: 10px;
 }
 .coopyright {
-  margin-top: 42px;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 .footer-1 {
   display: flex;
@@ -437,5 +451,5 @@ footer p {
 .map iframe {
   margin-top: 52px;
   width: 533px;
-  height: 408px;
+  height: 414px;
 }
